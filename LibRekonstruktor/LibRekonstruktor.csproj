@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8B8C6D0E-3527-4D4B-8D50-5C69F5AF71AB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LibRekonstruktor</RootNamespace>
+    <AssemblyName>LibRekonstruktor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>LibRekonstruktor.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>LibRekonstruktor.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algebra\Matice.cs" />
+    <Compile Include="Filtry\DimenzionalniFiltr.cs" />
+    <Compile Include="Filtry\IFiltrHran.cs" />
+    <Compile Include="Filtry\NormalovyFiltr.cs" />
+    <Compile Include="ProstoroveObjekty\Bod.cs" />
+    <Compile Include="ProstoroveObjekty\Primka.cs" />
+    <Compile Include="ProstoroveObjekty\Souradnice.cs" />
+    <Compile Include="ProstoroveObjekty\UseckaBase.cs" />
+    <Compile Include="Vykres.cs" />
+    <Compile Include="ProstoroveObjekty\Rovina.cs" />
+    <Compile Include="ProstoroveObjekty\Vektor.cs" />
+    <Compile Include="Pohled.cs" />
+    <Compile Include="ProstoroveObjekty\Usecka.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rekonstruktor.cs" />
+    <Compile Include="Ukladani\TextUkladacDratenehoModelu.cs" />
+    <Compile Include="Ukladani\TextUkladacPohledu.cs" />
+    <Compile Include="Ukladani\TextNacitacPohledu.cs" />
+    <Compile Include="Ukladani\TextUkladac.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Filtry\README.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,24 @@
+Rekonstruktor pravouhleho promitani
+(c) 2009-2010, Lukas Dolezal 
+
+POUZITI:
+
+	RekonstruktorCLI [/? | 
+	                  [/filter] Soubor_nakresu [Soubor_drateneho_modelu] ]
+
+Popis:
+	Soubor_nakresu
+		Soubor obsahujici nakresy jednotlivich pohledu.
+
+	Soubor_drateneho_modelu
+		Nepovinne. Soubor do nehoz se ulozi vystup rekonstrukce.
+
+	/?
+		Vypise tuto napovedu
+
+	/filter
+		EXPERIMENTALNI! Zapne filtr nepotrebnych hran drateneho modelu.
+
+
+Rekonstruue drateny model telesa podle zadanych nakresu, vysledek
+vypise na vystup, pokud neni urceno jinak.
